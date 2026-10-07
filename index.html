@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best FreeElec To-Do</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <section id="authView" class="card">
+      <h1>Best FreeElec</h1>
+      <p class="subtitle">To-Do List</p>
+
+      <div class="tabs">
+        <button id="loginTab" class="tab active">Login</button>
+        <button id="registerTab" class="tab">Register</button>
+      </div>
+
+      <form id="authForm">
+        <input id="email" type="email" placeholder="Email" required>
+        <input id="password" type="password" placeholder="Password (6+ characters)" minlength="6" required>
+        <button id="authButton" class="primary" type="submit">Login</button>
+        <p id="authMessage" class="message"></p>
+      </form>
+    </section>
+
+    <section id="todoView" class="card hidden">
+      <div class="topbar">
+        <div>
+          <h1>My Tasks</h1>
+          <p id="userEmail" class="subtitle"></p>
+        </div>
+        <button id="logoutButton" class="secondary">Logout</button>
+      </div>
+
+      <form id="taskForm" class="task-form">
+        <input id="taskInput" type="text" placeholder="What needs to be done?" maxlength="200" required>
+        <button class="primary" type="submit">Add</button>
+      </form>
+
+      <div class="filters">
+        <button data-filter="all" class="filter active">All</button>
+        <button data-filter="active" class="filter">Active</button>
+        <button data-filter="completed" class="filter">Completed</button>
+      </div>
+
+      <ul id="taskList"></ul>
+      <div class="bottom">
+        <span id="count">0 tasks</span>
+        <button id="clearCompleted" class="link">Clear completed</button>
+      </div>
+      <p id="todoMessage" class="message"></p>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
