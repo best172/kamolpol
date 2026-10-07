@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best FreeElec — To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h1>My To-Do List</h1>
+      <p class="subtitle">Stay organized and get things done.</p>
+      <form id="taskForm" class="task-form">
+        <input id="taskInput" type="text" maxlength="120" placeholder="What needs to be done?" autocomplete="off" required>
+        <button type="submit">Add Task</button>
+      </form>
+      <div class="toolbar">
+        <span id="taskCount">0 tasks</span>
+        <button id="clearCompleted" class="secondary" type="button">Clear completed</button>
+      </div>
+      <ul id="taskList" class="task-list"></ul>
+      <p id="emptyState" class="empty">No tasks yet. Add your first task above.</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
